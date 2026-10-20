@@ -1,0 +1,36 @@
+{
+  "proxies": [
+    {"name":"Novene","url":"https://cdn.jsdelivr.net/gh/Mtreasur0133-bit/lotsohnovenecuzimnotabot-1@main/v0001/novene.svg","tag":"static"},
+    {"name":"Cherri","url":"https://cdn.jsdelivr.net/gh/NotAbdullahHD/cherri@main/index.svg","tag":"static"},
+    {"name":"PeteZah Static","url":"https://cdn.jsdelivr.net/gh/PeteZah-G/PeteZahStaticDone@main/new.svg","tag":"static"},
+    {"name":"Doge v5","url":"https://s3.amazonaws.com/lsrelay-a/index.html","tag":"relay"},
+    {"name":"DDX","url":"https://ddxpro.s3us-east-1.amazonaws.com/index.html","tag":"static"},
+    {"name":"OIOP","url":"https://s3.us-east-1.amazonaws.com/oiop/index.html","tag":"static"},
+    {"name":"SVG-1","url":"https://gcore.jsdelivr.net/gh/hameslabybu-web/svg-1@8d93cbed8c6d2e194aa4daf304dde58ff8380ec2/index.svg","tag":"static"}
+  ],
+  "engines": [
+    {"name":"Google","q":"https://www.google.com/search?q=","ico":"google.com"},
+    {"name":"DuckDuckGo","q":"https://duckduckgo.com/?q=","ico":"duckduckgo.com"},
+    {"name":"Bing","q":"https://www.bing.com/search?q=","ico":"bing.com"},
+    {"name":"Brave","q":"https://search.brave.com/search?q=","ico":"search.brave.com"},
+    {"name":"Startpage","q":"https://www.startpage.com/sp/search?query=","ico":"startpage.com"},
+    {"name":"Ecosia","q":"https://www.ecosia.org/search?q=","ico":"ecosia.org"}
+  ],
+  "movie": [
+    {"name":"VidAPI","id":"imdb","movie":"https://vaplayer.ru/embed/movie/{id}","tv":"https://vaplayer.ru/embed/tv/{id}/{s}/{e}"},
+    {"name":"NexStream","id":"tmdb","movie":"https://api.codespecters.com/embed/movie/{id}?apikey=DEMO_36cd5611","tv":"https://api.codespecters.com/embed/tv/{id}/{s}/{e}?apikey=DEMO_36cd5611"},
+    {"name":"Videasy","id":"tmdb","movie":"https://player.videasy.net/movie/{id}","tv":"https://player.videasy.net/tv/{id}/{s}/{e}"},
+    {"name":"VidLink","id":"tmdb","movie":"https://vidlink.pro/movie/{id}","tv":"https://vidlink.pro/tv/{id}/{s}/{e}"},
+    {"name":"Embed.su","id":"tmdb","movie":"https://embed.su/embed/movie/{id}","tv":"https://embed.su/embed/tv/{id}/{s}/{e}"},
+    {"name":"VidSrc.to","id":"tmdb","movie":"https://vidsrc.to/embed/movie/{id}","tv":"https://vidsrc.to/embed/tv/{id}/{s}/{e}"},
+    {"name":"2Embed","id":"tmdb","movie":"https://www.2embed.cc/embed/{id}","tv":"https://www.2embed.cc/embedtv/{id}&s={s}&e={e}"}
+  ],
+  "anime": [
+    {"name":"MegaPlay","url":"https://megaplay.buzz/stream/ani/{id}/{ep}/{lang}"},
+    {"name":"VidPlus","url":"https://player.vidplus.to/embed/anime/{id}/{ep}?dub={dub}"},
+    {"name":"VidLink","url":"https://vidlink.pro/anime/{id}/{ep}/{lang}"},
+    {"name":"Videasy","url":"https://player.videasy.net/anime/{id}/{ep}"},
+    {"name":"Embed.su","url":"https://embed.su/embed/anime/{id}/{ep}/{lang}"},
+    {"name":"VidSrc.to","url":"https://vidsrc.to/embed/anime/{id}/{ep}"}
+  ]
+}
