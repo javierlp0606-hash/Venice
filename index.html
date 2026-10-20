@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="ember">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Moplite v4</title>
+<meta name="theme-color" content="#07070a">
+<meta name="description" content="Moplite v4 — media shell. Web, movies, anime, games and AI in one place.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307070a'/%3E%3Cpath d='M18 44V20l14 12 14-12v24' stroke='%23ff6a3d' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/inter@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cinzel-decorative@5/index.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/great-vibes@5/index.css">
+<link rel="stylesheet" href="./style.css">
+<link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div id="boot"><div class="boot-mark">M</div><div class="boot-bar"><i></i></div><p>moplite v4</p></div>
+
+<div id="app" hidden>
+  <aside id="rail">
+    <div class="rail-top">
+      <a class="brand" href="#/" title="Moplite v4">
+        <span class="mark">M</span><span class="word">Moplite<b>v4</b></span>
+      </a>
+      <button class="ib" id="railToggle" title="Collapse (Ctrl+B)">⟨</button>
+    </div>
+    <nav id="nav" aria-label="Primary"></nav>
+    <div class="rail-bot">
+      <button class="rail-cta" id="palBtn"><span>⌘</span><b>Search</b><kbd>Ctrl K</kbd></button>
+      <div class="who" id="who"></div>
+    </div>
+  </aside>
+
+  <main id="main">
+    <header id="topbar">
+      <button class="ib only-mob" id="mobRail">☰</button>
+      <div class="tb-title"><h1 id="pageTitle">Home</h1><p id="pageSub">Welcome back</p></div>
+      <div class="tb-sp"></div>
+      <div class="tb-quick" id="tbQuick"></div>
+      <div class="net" id="net"><i></i><span>—</span></div>
+      <button class="ib" id="btnTheme" title="Theme">◐</button>
+      <button class="ib" id="btnSource" title="Page source">&lt;/&gt;</button>
+      <button class="ib" id="btnHelp" title="Shortcuts (?)">?</button>
+    </header>
+    <section id="view" tabindex="-1"></section>
+    <footer id="foot">
+      <span>Moplite <b>v4</b> · build 4.0.0</span>
+      <span class="dot"></span><span>not a proxy · not a skin</span>
+      <span class="sp"></span>
+      <a href="#/settings">Settings</a><a href="#/profile">Profile</a>
+      <button class="lk" id="devPill" hidden>devtools</button>
+    </footer>
+  </main>
+</div>
+
+<div id="pal" hidden><div class="pal-box">
+  <input id="palIn" placeholder="Jump to a page, search movies, anime, games…" autocomplete="off" spellcheck="false">
+  <div id="palOut" class="pal-out"></div>
+  <div class="pal-foot"><kbd>↑↓</kbd> move <kbd>↵</kbd> open <kbd>esc</kbd> close <span class="sp"></span><b>Moplite</b></div>
+</div></div>
+
+<div id="modal" hidden><div class="modal-box"><header><h2 id="mTitle"></h2><button class="ib" data-close>✕</button></header><div id="mBody"></div></div></div>
+<div id="toasts"></div>
+<div id="ctx" hidden></div>
+
+<script>
+(function(){
+  var t0=Date.now();
+  function line(msg,color){
+    var b=document.getElementById('boot'); if(!b) return;
+    var p=document.createElement('p');
+    p.style.cssText='margin:7px 0 0;max-width:48ch;text-align:center;font-family:ui-monospace,monospace;'+
+      'font-size:11px;letter-spacing:0;text-transform:none;color:'+(color||'#8e8e9d');
+    p.textContent=msg; b.appendChild(p);
+  }
+  window.__mopDiag=line;
+
+  setInterval(function(){
+    var a=document.getElementById('app');
+    if(a&&!a.hidden) return;
+    if(Date.now()-t0>3000) line('booting… '+Math.round((Date.now()-t0)/1000)+'s','#5b5b6a');
+  },1000);
+
+  setTimeout(function(){
+    var a=document.getElementById('app');
+    if(a&&a.hidden){
+      line('core.js never finished — console has the real error','#fbbf24');
+      line('expect core.js · style.css · /pages · /data beside index.html','#5b5b6a');
+    }
+  },8000);
+
+  addEventListener('error',function(e){
+    if(e.target&&e.target!==window&&e.target.tagName){
+      line('failed to load <'+e.target.tagName.toLowerCase()+'> '+(e.target.src||e.target.href||''),'#f87171');
+    }else{
+      line('JS error: '+(e.message||'unknown')+' @ line '+(e.lineno||'?'),'#f87171');
+    }
+  },true);
+
+  addEventListener('unhandledrejection',function(e){
+    line('rejected: '+((e.reason&&e.reason.message)||e.reason),'#f87171');
+  });
+})();
+</script>
+<script type="module" src="./core.js"></script>
+</body>
+</html>
