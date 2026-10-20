@@ -1,0 +1,91 @@
+0	
+n	"2048"
+u	"https://gabrielecirulli.github.io/2048/"
+t	
+0	"puzzle"
+1	"classic"
+1	
+n	"Hextris"
+u	"https://hextris.github.io/hextris/"
+t	
+0	"puzzle"
+1	"arcade"
+2	
+n	"React Tetris"
+u	"https://chvin.github.io/react-tetris/"
+t	
+0	"puzzle"
+3	
+n	"Pac-Man Canvas"
+u	"https://platzh1rsch.github.io/pacman-canvas/"
+t	
+0	"retro"
+1	"arcade"
+4	
+n	"Snake"
+u	"https://patorjk.com/games/snake/"
+t	
+0	"classic"
+5	
+n	"Clumsy Bird"
+u	"https://ellisonleao.github.io/clumsy-bird/"
+t	
+0	"arcade"
+6	
+n	"Floppy Bird"
+u	"https://nebez.github.io/floppybird/"
+t	
+0	"arcade"
+7	
+n	"Tower Game"
+u	"https://iamkun.github.io/tower_game/"
+t	
+0	"arcade"
+8	
+n	"Astray"
+u	"https://wwwtyro.github.io/Astray/"
+t	
+0	"3d"
+1	"maze"
+9	
+n	"HexGL"
+u	"https://hexgl.bkcore.com/play/"
+t	
+0	"racing"
+1	"3d"
+10	
+n	"Space Huggers"
+u	"https://killedbyapixel.github.io/SpaceHuggers/"
+t	
+0	"action"
+11	
+n	"Untrusted"
+u	"https://alexnisnevich.github.io/untrusted/"
+t	
+0	"puzzle"
+1	"code"
+12	
+n	"Radius Raid"
+u	"https://jackrugile.com/radius-raid/"
+t	
+0	"shooter"
+13	
+n	"Duck Hunt"
+u	"https://mattsurabian.github.io/duckhunt/"
+t	
+0	"retro"
+14	
+n	"Crisp Games"
+u	"https://abagames.github.io/crisp-game-lib-11-games/"
+t	
+0	"collection"
+15	
+n	"Cookie Clicker"
+u	"https://orteil.dashnet.org/cookieclicker/"
+t	
+0	"idle"
+16	
+n	"Chess TV"
+u	"https://lichess.org/tv/frame?theme=brown&bg=dark"
+t	
+0	"board"
